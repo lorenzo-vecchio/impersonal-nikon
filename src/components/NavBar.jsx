@@ -20,8 +20,10 @@ const NavBar = () => {
             home
           </NavLink>
         </p>
-        <p className="linkNav">
-          portfolio
+        <p style={getLinkStyle("/portfolio")} className="linkNav">
+          <NavLink to="portfolio" style={styles.removeLinkDefault}>
+            portfolio
+          </NavLink>
         </p>
         <p style={getLinkStyle("/contact")} className="linkNav">
           <NavLink to="contact" style={styles.removeLinkDefault}>
@@ -60,7 +62,7 @@ const styles = {
     gridTemplateRows: "1fr",
     gridColumnGap: "0px",
     width: "100%",
-    height: "10vh",
+    height: "5rem",
     boxSizing: "border-box",
     position: "fixed",
     left: "0",
