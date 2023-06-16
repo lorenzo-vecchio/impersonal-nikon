@@ -13,7 +13,7 @@ const PortfolioPage = () => {
             <div style={styles.presskitContainer}>
                 <h1 className="sectionTitle">Presskit</h1>
                 <div>
-                    <GridGallery links={presskitLinks}/>
+                    <GridGallery links={presskitLinks} style={styles.presskitContainer}/>
                 </div>
             </div>
         </div>
@@ -27,10 +27,10 @@ const styles = {
         boxSizing: 'border-box',
     },
     spacer: {
-        height: "5rem"
+        height: "5rem",
+        width: '100vw'
     },
     presskitContainer: {
-        margin: '1rem',
         boxSizing: 'border-box',
     }
 }

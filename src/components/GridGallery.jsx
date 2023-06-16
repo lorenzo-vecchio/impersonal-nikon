@@ -13,7 +13,8 @@ const GridGallery = (props) => {
                         path={link}
                         width="200px"
                         style={styles.image}
-                        lqip={{ active: true, quality: 20 }}
+                        lqip={{ active: true, quality: 10 }}
+                        loading="lazy"
                     />
                 )
             })}

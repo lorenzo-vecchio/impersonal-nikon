@@ -6,6 +6,20 @@ import { useEffect, useRef, useState } from 'react';
 
 
 const HomePage = () => {
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowSize(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
+
 
   const [isVisible, setIsVisible] = useState(false);
   const blockquoteRef = useRef(null);
