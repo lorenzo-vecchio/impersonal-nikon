@@ -82,3 +82,10 @@ blockquote cite:before {
     border-radius: 10px;
     border: 04px solid transparent;
   }
+
+  .sectionTitle {
+    background: -webkit-linear-gradient(left, #0f23ff, #ee01ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+  }
