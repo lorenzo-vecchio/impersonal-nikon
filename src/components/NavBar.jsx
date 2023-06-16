@@ -71,16 +71,16 @@ const NavBar = () => {
         ?
         <div style={styles.mobileLinks}>
           <p style={getLinkStyle("/")} className="linkNav">
-            <NavLink to="/" style={styles.removeLinkDefault}>
+            <NavLink to="/" style={styles.removeLinkDefault} onClick={navClick}>
               home
             </NavLink>
           </p>
-          <p style={getLinkStyle("/portfolio")} className="linkNav">
+          <p style={getLinkStyle("/portfolio")} className="linkNav" onClick={navClick}>
             <NavLink to="portfolio" style={styles.removeLinkDefault}>
               portfolio
             </NavLink>
           </p>
-          <p style={getLinkStyle("/contact")} className="linkNav">
+          <p style={getLinkStyle("/contact")} className="linkNav" onClick={navClick}>
             <NavLink to="contact" style={styles.removeLinkDefault}>
               contatti
             </NavLink>
