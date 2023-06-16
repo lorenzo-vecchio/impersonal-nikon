@@ -107,7 +107,8 @@ const styles = {
     top: "0",
     backgroundColor: "rgba(0, 0, 0, 0.60)",
     zIndex: "999",
-    backdropFilter: "blur(10px)"
+    backdropFilter: "blur(10px)",
+    WebkitBackdropFilter: "blur(10px)"
   },
   navMobile: {
     gridTemplateColumns: "repeat(2, 1fr)",
