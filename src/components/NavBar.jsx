@@ -127,6 +127,7 @@ const styles = {
     top: '5rem',
     backgroundColor: "rgba(0, 0, 0, 0.60)",
     backdropFilter: "blur(10px)",
+    WebkitBackdropFilter: "blur(10px)",
     width: "100vw",
     boxSizing: 'borderBox',
     display: 'flex',
