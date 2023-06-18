@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from 'react';
 const HomePage = () => {
   const [windowSize, setWindowSize] = useState(window.innerWidth);
 
+
   useEffect(() => {
     const handleWindowResize = () => {
       setWindowSize(window.innerWidth);
@@ -49,8 +50,8 @@ const HomePage = () => {
       <div style={styles.firstSection}>
         <img src={background} style={styles.image} />
         <div style={styles.firstSectionContent}>
-          <h1 style={styles.titolo}>La mia ispirazione</h1>
-          <h3 style={styles.descrizione}>
+          <h1 style={windowSize > 900 ? styles.titolo : {...styles.titolo, ...styles.titoloMobile}}>La mia ispirazione</h1>
+          <h3 style={windowSize > 900 ? styles.descrizione : {...styles.descrizione, ...styles.descrizioneMobile}}>
             I volti sono la migliore fonte di ispirazione.
             <br />
             Dietro a ogni sguardo si cela una storia diversa e pronta per essere
@@ -58,10 +59,11 @@ const HomePage = () => {
           </h3>
         </div>
       </div>
-      <div style={styles.secondSection}>
-        <img src={image2} style={styles.image2}/>
+      <div style={windowSize > 900 ? styles.secondSection : {...styles.secondSection, ...styles.secondSectionMobile}}>
+        <img src={image2} style={windowSize > 900 ? styles.image2 : {...styles.image2, ...styles.image2Mobile}}/>
         <blockquote style={styles.secondSectionText} ref={blockquoteRef}>
-        {isVisible && (<TypeAnimation
+        {isVisible &&
+        (<TypeAnimation
           sequence={[
             "Quando impari a prestare attenzione, puoi immortalare le immagini con la mente o in una foto. Tra le due non c'è differenza."
           ]}
@@ -109,8 +111,14 @@ const styles = {
     fontSize: "4rem",
     fontWeight: 400
   },
+  titoloMobile: {
+    fontSize: "2em"
+  },
   descrizione: {
     fontWeight: 200,
+  },
+  descrizioneMobile: {
+    textAlign: "center"
   },
   secondSection: {
     height: "100vh",
@@ -120,9 +128,16 @@ const styles = {
     alignItems: "center",
     scrollSnapAlign: "start",
   },
+  secondSectionMobile: {
+    flexDirection: 'column'
+  },
   image2: {
     width: "50%",
     objectFit: "cover",
+  },
+  image2Mobile: {
+    width: '100%',
+    height: '50%'
   },
   secondSectionText: {
     fontWeight: 200,

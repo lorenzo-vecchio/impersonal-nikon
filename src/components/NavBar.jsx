@@ -3,8 +3,9 @@ import { useState, useEffect } from 'react';
 
 const NavBar = () => {
   const location = useLocation();
-  const [windowSize, setWindowSize] = useState(window.innerWidth);
   const [navOpen, setNavOpen] = useState(false);
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+
 
   useEffect(() => {
     const handleWindowResize = () => {
