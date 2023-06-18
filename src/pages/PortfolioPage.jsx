@@ -1,5 +1,6 @@
 import GridGallery from "../components/GridGallery";
 
+
 const PortfolioPage = () => {
     const presskitLinks = [];
 
