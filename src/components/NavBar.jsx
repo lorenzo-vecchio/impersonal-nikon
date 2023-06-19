@@ -62,9 +62,9 @@ const NavBar = () => {
           </a>
           :
           navOpen ?
-          <svg onClick={navClick} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          <svg onClick={navClick} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" ><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
           :
-          <svg onClick={navClick} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          <svg onClick={navClick} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" ><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
         }
       </div>
       {
@@ -107,7 +107,7 @@ const styles = {
     left: "0",
     top: "0",
     backgroundColor: "rgba(0, 0, 0, 0.60)",
-    zIndex: "999",
+    zIndex: "5",
     backdropFilter: "blur(10px)",
     WebkitBackdropFilter: "blur(10px)"
   },
@@ -134,7 +134,7 @@ const styles = {
     display: 'flex',
     flexDirection: "column",
     alignItems: 'center',
-    zIndex: 999,
+    zIndex: 5,
     textTransform: "uppercase",
 
   },

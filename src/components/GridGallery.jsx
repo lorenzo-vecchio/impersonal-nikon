@@ -1,10 +1,13 @@
 import { IKImage } from 'imagekitio-react';
 import { useEffect, useRef, useState } from 'react';
+import Carousel from './Carousel';
 
 const urlEndpoint = 'https://ik.imagekit.io/impersonalnikon';
 
 const GridGallery = (props) => {
     const [windowSize, setWindowSize] = useState(window.innerWidth);
+    const [showCarousel, setShowCarousel] = useState(false);
+    const [linkSingleImage, setLinkSingleImage] = useState('');
 
 
     useEffect(() => {
@@ -19,8 +22,26 @@ const GridGallery = (props) => {
         };
     }, []);
 
+    function imageClick(link) {
+        if (!showCarousel) {
+            setLinkSingleImage(link);
+        }
+        setShowCarousel(true);
+    }
+    function closeClick() {
+        setShowCarousel(false);
+    }
     return (
         <div style={styles.container}>
+            {
+                showCarousel ?
+                <Carousel
+                    link={linkSingleImage}
+                    closeButtonClick={closeClick}
+                />
+                :
+                null
+            }
             {props.links.map((link, index) => {
                 return (
                     <IKImage
@@ -31,6 +52,7 @@ const GridGallery = (props) => {
                         style={styles.image}
                         lqip={{ active: true, quality: 10 }}
                         loading="lazy"
+                        onClick={() => imageClick(link)}
                     />
                 )
             })}
