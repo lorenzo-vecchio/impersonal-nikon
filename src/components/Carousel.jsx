@@ -9,7 +9,7 @@ const Carousel = (props) => {
                 urlEndpoint={urlEndpoint} 
                 path={props.link}
                 style={styles.image}
-                lqip={{ active: true, quality: 10 }}
+                // lqip={{ active: true, quality: 10 }}
                 onClick={props.closeButtonClick}
                 />
             :
